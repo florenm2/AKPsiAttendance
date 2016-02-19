@@ -1,0 +1,98 @@
+Main Objects
+	-Users
+		-Participation Score
+		-Committee Involvement/Positions
+	-Planned Events
+		-Scheduled to happen
+		-Committee-Specific vs General Events
+		-Description of what committee the event related to
+	-Past Events (Multiple Tables per committee)
+		-Have already happened
+		-Retains same data fields from planned events
+		-Includes data fields specific to that organizations
+	-Committee Heads
+		-Include any span of time (don't need to be active)
+		-Data fields created/filled in based off of what they submit through the website
+			-Data placeholder names are already pre-determined
+		
+
+Tables
+	-User Information
+		-users
+	-Current events (1 record per each event held)
+		-eventsCurrent
+	-Past events (1 record per each event held; stores all events ever held [except for that current semester])
+		-professionalDevelopmentEvents
+		-brotherhoodEvents
+		-philanthropyEvents
+		-financeEvents
+		-investmentEvents
+		-consultingEvents
+		-fundraisingEvents
+		-sustainabilityEvents
+		-wardenEvents
+		-recrutimentEvents
+		-(ADD MORE LATER)
+	-Past events (one record for each type of event)
+		-professionalDevelopmentGen
+		-brotherhoodGen
+		-philanthropyGen
+		-financeGen
+		-investmentGen
+		-consultingGen
+		-fundraisingGen
+		-sustainabilityGen
+		-wardenGen
+		-recrutimentGen
+		-(ADD MORE LATER)
+	-Committee Head Information
+		-committeeHeads
+	-Position Responsibility
+		-professionalDevelopmentPeople
+		-brotherhoodPeople
+		-philanthropyPeople
+		-(ADD MORE LATER)
+		
+	  
+Table's Data
+	-users
+		-Authentication/Authorization
+			-username
+			-password
+		-Additional Information
+			-loginStart
+			-loginEnd
+		-Participation (required)
+			-Philanthropy Hours (philanthropyHours)
+			-Info Night (infoNight)
+			-First Round (firstRound)
+			-Voting Chapter (voteChapter)
+			-Induction Ceremony (induction)
+			-Mid Court (midCourt)
+			-Honor Court (honorCourt)
+			-Added Events (Event Name 1 --> eventName1Req)
+		-Participation (extra)
+			-Added Events (Event Name 1 --> eventName1Opt)
+		-Committee Involvement / Committee Leadership
+			-First Committee (committeeName; [member/leader])
+			-Second Committee (committeeName; [member/leader])
+			-Third Committee (committeeName; [member/leader])
+	-eventsCurrent
+		-Basic Information
+			-eventName
+			-eventDate
+			-eventDescription
+	-[committee name]Event
+		-fundraisingEvents
+			-basicInfo (3 items from eventsCurrent)
+			-suppliesName1Req
+			-suppliesName2Req
+			-suppliesName1Opt
+			-suppliesName2Opt
+			-
+		-Up to the discression of the committee
+		-(ADD MORE LATER)
+	-committeeHeads
+		-General Advice
+			-eventName1Advice
+			-eventName2Advice
